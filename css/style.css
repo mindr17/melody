@@ -1,8 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
 }
 .header {
-  background-color: #635854; 
+  background-color: #635854;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #3596F5;
 }
 .navbar {
   width: 1280px;
@@ -24,14 +30,14 @@ body {
 }
 .navbar-link {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 .navbar-contacts {
   text-align: right;
 }
 .navbar-text {
   display: block;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 4px;
 }
 .navbar-phone {
@@ -39,5 +45,5 @@ body {
   font-size: 17px;
   line-height: 20px;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
