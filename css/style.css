@@ -146,14 +146,13 @@ body {
 }
 .footer-contacts {
   text-align: left;
-  color: #635854;
-  display: block;
-  margin-bottom: 4px;
-  margin-left: 37px;
-  display: flex; /* сделали блок гибким */
-  justify-content: column; /* расставили элементы по краям */
-  align-items: center;
   font-size: 14px;
+  margin-left: 37px;
+}
+.footer-text {
+  display: block;
+  color: #635854;
+  margin-bottom: 4px;
 }
 .footer-phone {
   text-decoration: none;
