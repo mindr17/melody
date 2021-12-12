@@ -19,7 +19,7 @@ body {
   border-bottom: 4px solid #3596F5;
 }
 .navbar {
-  width: 1280px;
+  max-width: 1280px;
   margin: auto;
   display: flex; /* сделали блок гибким */
   justify-content: space-between; /* расставили элементы по краям */
@@ -56,6 +56,16 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.menu-button {
+  /* position: absolute; */
+  border: none;
+  cursor: pointer;
+  display: none;
+  color: #635854;
+}
+.close-menu {
+  display: none;
+}
 .main {
   display: flex;
   max-width: 1280px;
@@ -77,6 +87,9 @@ body {
 .home-image path:hover{
   opacity: 1;
   cursor: pointer;
+}
+path.current-floor {
+  opacity: 1;
 }
 .counter-group {
   display: flex;
