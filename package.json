@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "start": "browser-sync --watch"
+        "start": "browser-sync start --server --watch"
     }
 }
