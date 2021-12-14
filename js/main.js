@@ -13,11 +13,8 @@ $(document).ready(function() {
 
   // Квартиры
   flatPath.on("mouseover", function() {
-    let currentFlatOrder = +$(this).attr("data-flat") - 1;
-    
-    // $('.flat-link').removeClass('floor-link-mouseover');
+    let currentFlatOrder = $(this).attr("data-flat") - 1;
     $(`.flat-link:eq(${currentFlatOrder})`).addClass("flat-link-mouseover");
-    // console.log($(`.flat-link:eq(${currentFlatOrder})`));
   });
   flatPath.on("mouseout", function() {
     $('.flat-link').removeClass('flat-link-mouseover');
@@ -41,7 +38,6 @@ $(document).ready(function() {
   floorPath.on("mouseover", function() {
     floorPath.removeClass("current-floor");
     currentFloor = $(this).attr("data-floor");
-    console.log(this)
     $(".counter").text(currentFloor);
   });
 
