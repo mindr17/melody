@@ -4,10 +4,13 @@ $(document).ready(function() {
   let usCurrentFlat = 1;
   var floorPath = $(".home-image path");
   var counterUp = $(".counter-up");
+  var modalFeedback = $('.modal-feedback');
   var counterDown = $(".counter-down");
   var modal = $(".modal");
   var modalCloseButton = $(".modal-close-button");
+  var modalFeedbackCloseButton = $(".modal-feedback-close-button");
   var viewFlatsButton = $(".view-flats");
+  var order =$(".order");
   var flatPath = $(".modal-dialog path");
   let flatLink = $(".flat-item a");
 
@@ -33,6 +36,11 @@ $(document).ready(function() {
   flatLink.on("mouseout", function() {
     $(`.flats path`).removeClass("flat-path-mouseover");
   });
+
+  flatPath.on("click", toggleModalFeedback); // при клике на квартиру вызываем модальное окно с формой
+  flatLink.on("click", toggleModalFeedback); // при клике на ссылку на квартиру вызываем модальное окно с формой
+  modalFeedbackCloseButton.on("click", toggleModalFeedback); // при клике на крестик закрываем модальное окно
+  order.on("click", toggleModalFeedback); // при клике на оформить заявку скрываем модальное окно с формой
 
   // Этажи
   floorPath.on("mouseover", function() {
@@ -67,5 +75,12 @@ $(document).ready(function() {
   });
   function toggleModal() {
     modal.toggleClass("is-open");
+  };
+  
+  function toggleModalFeedback() {
+    modalFeedback.toggleClass("is-open");
   }
 });
+
+
+
