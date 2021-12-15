@@ -170,7 +170,6 @@
   <!-- /.modal -->
 
   <div class="modal-feedback">
-  
     <div class="modal-form">
       <button class="modal-feedback-close-button">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -178,7 +177,10 @@
           <path d="M26 2L2 26" stroke="#3596F5" stroke-width="3" />
         </svg>
       </button>
-      <form class="modal-feed-form" action="/php/welcome.php" method="get">
+
+      <!-- Sending data -->
+      <!-- <form class="modal-feed-form" action="" method="get"> -->
+      <form class="modal-feed-form" action="/php/save.php" method="get">
         <h3 class="modal-form-title">Введите Ваши данные</h3>
         <!-- /.modal-form-title -->
         <input name="name" required="" placeholder="Имя" type="text">
@@ -189,6 +191,7 @@
             style="text-decoration: none; font-size: 16px; font-weight: 400; color: #8d2c05;">политикой обработки
             данных</a>; <br>поля формы заполняйте корректно</span>
       </form>
+
     </div>
     <!-- /.modal-form -->
   </div>

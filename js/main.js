@@ -1,17 +1,17 @@
 $(document).ready(function() {
-  var currentFloor = 2;
-  var currentFlat = 1;
+  let currentFloor = 2;
+  let currentFlat = 1;
   let usCurrentFlat = 1;
-  var floorPath = $(".home-image path");
-  var counterUp = $(".counter-up");
-  var modalFeedback = $('.modal-feedback');
-  var counterDown = $(".counter-down");
-  var modal = $(".modal");
-  var modalCloseButton = $(".modal-close-button");
-  var modalFeedbackCloseButton = $(".modal-feedback-close-button");
-  var viewFlatsButton = $(".view-flats");
-  var order =$(".order");
-  var flatPath = $(".modal-dialog path");
+  let floorPath = $(".home-image path");
+  let counterUp = $(".counter-up");
+  let modalFeedback = $('.modal-feedback');
+  let counterDown = $(".counter-down");
+  let modal = $(".modal");
+  let modalCloseButton = $(".modal-close-button");
+  let modalFeedbackCloseButton = $(".modal-feedback-close-button");
+  let viewFlatsButton = $(".view-flats");
+  let order =$(".order");
+  let flatPath = $(".modal-dialog path");
   let flatLink = $(".flat-item a");
 
   // Квартиры
@@ -40,7 +40,39 @@ $(document).ready(function() {
   flatPath.on("click", toggleModalFeedback); // при клике на квартиру вызываем модальное окно с формой
   flatLink.on("click", toggleModalFeedback); // при клике на ссылку на квартиру вызываем модальное окно с формой
   modalFeedbackCloseButton.on("click", toggleModalFeedback); // при клике на крестик закрываем модальное окно
-  order.on("click", toggleModalFeedback); // при клике на оформить заявку скрываем модальное окно с формой
+
+  order.on("click", function(e) {
+    // e.preventDefault(); // Запрещаем отправку формы из html
+    // let formData = $('form').serialize();
+    // let request = new XMLHttpRequest();
+    // request.open("GET", "php/save.php");
+    // request.send(formData);
+    // alert(`Вы отправили следующие данные: ${formData}`);
+    toggleModalFeedback();
+  });
+
+  // order.on("click", function(e) {
+  //   // Запрещаем стандартную отправку формы из html
+  //   e.preventDefault();
+    
+  //   // Получаем данные из формы
+  //   let formData = new FormData(document.querySelector('form'));
+
+  //   // Парсим объект
+  //   let object = {};
+  //   formData.forEach((value, key) => object[key] = value);
+  //   formData = JSON.stringify(object); 
+
+  //   // Отправляем данные на сервер
+  //   let request = new XMLHttpRequest();
+  //   request.open("GET", "php/welcome.php");
+  //   request.send(formData);
+    
+  //   alert(`Вы отправили следующие данные: ${formData}`);
+  //   toggleModalFeedback();
+  // });
+
+
 
   // Этажи
   floorPath.on("mouseover", function() {
